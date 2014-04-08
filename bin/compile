@@ -10,4 +10,4 @@ cd $1
 curl https://s3.amazonaws.com/mergeguard/cmake.tar.gz -s -O
 
 # untar the binary to the directory we want
-tar -C /usr/local -xvf cmake.tar.gz
+tar -C /app -xvf cmake.tar.gz
