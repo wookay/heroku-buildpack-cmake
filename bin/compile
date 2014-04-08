@@ -16,4 +16,4 @@ mkdir -p vendor/cmake
 tar -C vendor/cmake -xvf cmake.tar.gz
 
 # Add to path here, since release seems to only work on first release
-export PATH=$PATH:vendor/cmake/bin
+export PATH=$PATH:/app/vendor/cmake/bin
