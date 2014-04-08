@@ -9,8 +9,5 @@ cd $1
 # download the mruby binary (-O) silently (-s)
 curl https://s3.amazonaws.com/mergeguard/cmake.tar.gz -s -O
 
-# make a directory to untar (like unzip) the binary
-mkdir -p /app/vendor/bundle
-
 # untar the binary to the directory we want
-tar -C /app/vendor/bundle -xvf cmake.tar.gz
+tar -C /usr/local -xvf cmake.tar.gz
