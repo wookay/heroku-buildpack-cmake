@@ -13,4 +13,4 @@ curl http://www.cmake.org/files/v2.8/cmake-2.8.12.2-Linux-i386.tar.gz -s -O
 mkdir -p vendor/cmake
 
 # untar the binary to the directory we want
-tar -C vendor/cmake -xvf cmake.tgz
+tar -C vendor/cmake -xvf cmake-2.8.12.2-Linux-i386.tar.gz
