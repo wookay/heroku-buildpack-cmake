@@ -15,7 +15,7 @@ mkdir -p /app/vendor/cmake/
 # untar the binary to the directory we want
 tar -C /app/vendor/cmake/ -xvf cmake.tar.gz
 
-debug=`which cmake`
+debug=`ls /app/vendor/cmake/bin`
 echo $debug
 
 echo $PATH
