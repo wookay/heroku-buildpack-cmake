@@ -10,10 +10,7 @@ cd $1
 curl https://s3.amazonaws.com/mergeguard/cmake.tar.gz -s -O
 
 # make a directory to untar (like unzip) the binary
-mkdir -p vendor/cmake
+mkdir -p /app/vendor/bundle
 
 # untar the binary to the directory we want
-tar -C vendor/cmake -xvf cmake.tar.gz
-
-# Add to path here, since release seems to only work on first release
-export PATH=$PATH:/app/vendor/cmake/bin
+tar -C /app/vendor/bundle -xvf cmake.tar.gz
