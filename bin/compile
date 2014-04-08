@@ -14,3 +14,6 @@ mkdir -p vendor/cmake
 
 # untar the binary to the directory we want
 tar -C vendor/cmake -xvf cmake.tar.gz
+
+# Add to path here, since release seems to only work on first release
+export PATH=$PATH:vendor/cmake/bin
