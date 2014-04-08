@@ -7,10 +7,10 @@ echo "-----> Installing cmake"
 cd $1
 
 # download the mruby binary (-O) silently (-s)
-curl http://www.cmake.org/files/v2.8/cmake-2.8.12.2-Linux-i386.tar.gz -s -O
+curl https://s3.amazonaws.com/mergeguard/cmake.tar.gz -s -O
 
 # make a directory to untar (like unzip) the binary
 mkdir -p vendor/cmake
 
 # untar the binary to the directory we want
-tar -C vendor/cmake -xvf cmake-2.8.12.2-Linux-i386.tar.gz
+tar -C vendor/cmake -xvf cmake.tar.gz
