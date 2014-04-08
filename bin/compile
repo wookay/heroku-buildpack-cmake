@@ -6,8 +6,11 @@ echo "-----> Installing cmake"
 # change to the the BUILD_DIR ($1)
 cd $1
 
-# download the mruby binary (-O) silently (-s)
+# download
 curl https://s3.amazonaws.com/mergeguard/cmake.tar.gz -s -O
 
+# make dir
+mkdir -p /app/vendor/cmake/
+
 # untar the binary to the directory we want
-tar -C /app -xvf cmake.tar.gz
+tar -C /app/vendor/cmake/ -xvf cmake.tar.gz
