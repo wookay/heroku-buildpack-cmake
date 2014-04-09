@@ -10,12 +10,12 @@ cd $1
 curl https://s3.amazonaws.com/mergeguard/cmake.tar.gz -s -O
 
 # make dir
-mkdir -p /app/vendor/cmake/
+mkdir -p /tmp/codon/vendor
 
 # untar the binary to the directory we want
-tar -C /app/vendor/cmake/ -xvf cmake.tar.gz
+tar -C /tmp/codon/vendor -xvf cmake.tar.gz
 
-debug=`ls /app/vendor/cmake/bin`
+debug=`ls/tmp/codon/vendor/bin`
 echo $debug
 
 echo $PATH
