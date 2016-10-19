@@ -3,20 +3,21 @@
 
 echo "-----> Installing cmake"
 
-# change to the the BUILD_DIR ($1)
-cd $1
+BUILD_DIR=$1
+CACHE_DIR=$2
 
-# download
-curl https://s3.amazonaws.com/mergeguard/cmake.tar.gz -s -O
+mkdir -p $CACHE_DIR
 
-# make dir
-mkdir -p /tmp/codon/vendor
+CMAKE_URL="https://s3.amazonaws.com/mergeguard/cmake.tar.gz"
+CMAKE_BINARIES="$CACHE_DIR/cmake.tar.gz"
 
-# untar the binary to the directory we want
-tar -C /tmp/codon/vendor -xvf cmake.tar.gz
+if [ -f $CMAKE_BINARIES ]; then
+  echo "Using cmake binaries from cache" | indent
+else
+  echo "Downloading binaries ($CMAKE_URL)" | indent
+  curl -L $CMAKE_URL -o $CMAKE_BINARIES
+fi
 
-debug=`ls /tmp/codon/vendor/bin`
-echo $debug
-
-echo $PATH
-
+cd $BUILD_DIR
+mkdir -p .heroku/vendor/bin
+tar -C .heroku/vendor -xvf $CMAKE_BINARIES
